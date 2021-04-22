@@ -16,8 +16,6 @@ var MatrixReader = function(text) {
 
 parser.mixin(MatrixReader);
 
-module.exports = MatrixReader;
-
 MatrixReader.prototype.parse = function(text) {
   text.split("\n").forEach(function(el) {
     this.parseLine(el);
@@ -92,3 +90,5 @@ MatrixReader.prototype.buildMatrix = function() {
     }
   }
 };
+
+export default MatrixReader;
